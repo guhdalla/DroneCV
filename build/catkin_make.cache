@@ -1,0 +1,2 @@
+controller_cam
+-DCATKIN_DEVEL_PREFIX=/home/gustavo/dronecv_ws/devel -DCMAKE_INSTALL_PREFIX=/home/gustavo/dronecv_ws/install -G Unix Makefiles
