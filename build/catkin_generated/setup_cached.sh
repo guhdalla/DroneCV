@@ -7,4 +7,4 @@
 # new environment variables
 
 # modified environment variables
-export PWD='/home/gustavo/dronecv_ws/build'
+export PWD='/home/gustavo/DroneCV/build'

@@ -1,0 +1,8 @@
+prefix=/home/gustavo/DroneCV/install
+
+Name: dronecv
+Description: Description of dronecv
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

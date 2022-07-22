@@ -2,7 +2,7 @@
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/gustavo/dronecv_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/gustavo/DroneCV/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -39,7 +39,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/gustavo/dronecv_ws/build/gtest/googletest/cmake_install.cmake")
+  include("/home/gustavo/DroneCV/build/gtest/googletest/cmake_install.cmake")
 
 endif()
 

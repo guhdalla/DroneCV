@@ -1,8 +1,8 @@
-# Install script for directory: /home/gustavo/dronecv_ws/src/controller_cam
+# Install script for directory: /home/gustavo/DroneCV/src/controller_cam
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/gustavo/dronecv_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/gustavo/DroneCV/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,17 +38,17 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/gustavo/dronecv_ws/build/controller_cam/catkin_generated/installspace/controller_cam.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/gustavo/DroneCV/build/controller_cam/catkin_generated/installspace/controller_cam.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/controller_cam/cmake" TYPE FILE FILES
-    "/home/gustavo/dronecv_ws/build/controller_cam/catkin_generated/installspace/controller_camConfig.cmake"
-    "/home/gustavo/dronecv_ws/build/controller_cam/catkin_generated/installspace/controller_camConfig-version.cmake"
+    "/home/gustavo/DroneCV/build/controller_cam/catkin_generated/installspace/controller_camConfig.cmake"
+    "/home/gustavo/DroneCV/build/controller_cam/catkin_generated/installspace/controller_camConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/controller_cam" TYPE FILE FILES "/home/gustavo/dronecv_ws/src/controller_cam/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/controller_cam" TYPE FILE FILES "/home/gustavo/DroneCV/src/controller_cam/package.xml")
 endif()
 

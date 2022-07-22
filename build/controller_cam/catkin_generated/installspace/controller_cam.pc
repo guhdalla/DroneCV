@@ -1,4 +1,4 @@
-prefix=/home/gustavo/dronecv_ws/install
+prefix=/home/gustavo/DroneCV/install
 
 Name: controller_cam
 Description: Description of controller_cam

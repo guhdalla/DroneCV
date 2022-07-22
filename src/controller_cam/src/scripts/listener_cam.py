@@ -7,12 +7,13 @@ from cv_bridge import CvBridge, CvBridgeError
 import cv2
 import numpy as np
 from math import dist
+from enums.enum_mask_color import EnumColorMask
 import json
 
 class ListenerCam:
 
-    def __init__(self, color):
-        self.color = color
+    def __init__(self):
+        self.color = EnumColorMask.GREEN.value
         self.cam_sub = rospy.Subscriber('/bebop2/camera_base/image_raw', Image, self.image_callback)
         self.cam_pub = rospy.Publisher("/dronecv/image", Image, queue_size=10)
         self.cam_info_pub = rospy.Publisher("/dronecv/image/info", String, queue_size=10)
@@ -89,3 +90,11 @@ class ListenerCam:
 
     def draw_contours(self, img, contours, size, color):
         cv2.drawContours(img, contours, -1, color, size)
+
+if __name__ == '__main__':
+    try:
+        rospy.init_node("listener_cam_node")
+        ListenerCam()
+        rospy.spin()
+    except rospy.ROSInterruptException:
+        pass

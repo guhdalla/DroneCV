@@ -1,4 +1,4 @@
-prefix=/home/gustavo/dronecv_ws/devel
+prefix=/home/gustavo/DroneCV/devel
 
 Name: controller_cam
 Description: Description of controller_cam

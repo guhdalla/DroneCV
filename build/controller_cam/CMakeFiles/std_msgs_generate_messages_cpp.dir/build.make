@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/gustavo/dronecv_ws/src
+CMAKE_SOURCE_DIR = /home/gustavo/DroneCV/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/gustavo/dronecv_ws/build
+CMAKE_BINARY_DIR = /home/gustavo/DroneCV/build
 
 # Utility rule file for std_msgs_generate_messages_cpp.
 
@@ -63,10 +63,10 @@ controller_cam/CMakeFiles/std_msgs_generate_messages_cpp.dir/build: std_msgs_gen
 .PHONY : controller_cam/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
 
 controller_cam/CMakeFiles/std_msgs_generate_messages_cpp.dir/clean:
-	cd /home/gustavo/dronecv_ws/build/controller_cam && $(CMAKE_COMMAND) -P CMakeFiles/std_msgs_generate_messages_cpp.dir/cmake_clean.cmake
+	cd /home/gustavo/DroneCV/build/controller_cam && $(CMAKE_COMMAND) -P CMakeFiles/std_msgs_generate_messages_cpp.dir/cmake_clean.cmake
 .PHONY : controller_cam/CMakeFiles/std_msgs_generate_messages_cpp.dir/clean
 
 controller_cam/CMakeFiles/std_msgs_generate_messages_cpp.dir/depend:
-	cd /home/gustavo/dronecv_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/gustavo/dronecv_ws/src /home/gustavo/dronecv_ws/src/controller_cam /home/gustavo/dronecv_ws/build /home/gustavo/dronecv_ws/build/controller_cam /home/gustavo/dronecv_ws/build/controller_cam/CMakeFiles/std_msgs_generate_messages_cpp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/gustavo/DroneCV/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/gustavo/DroneCV/src /home/gustavo/DroneCV/src/controller_cam /home/gustavo/DroneCV/build /home/gustavo/DroneCV/build/controller_cam /home/gustavo/DroneCV/build/controller_cam/CMakeFiles/std_msgs_generate_messages_cpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : controller_cam/CMakeFiles/std_msgs_generate_messages_cpp.dir/depend
 
