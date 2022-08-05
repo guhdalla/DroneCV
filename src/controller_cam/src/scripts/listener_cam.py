@@ -13,7 +13,7 @@ import json
 class ListenerCam:
 
     def __init__(self):
-        self.color = EnumColorMask.GREEN.value
+        self.color = EnumColorMask.GRAY.value
         self.cam_sub = rospy.Subscriber('/bebop2/camera_base/image_raw', Image, self.image_callback)
         self.cam_pub = rospy.Publisher("/dronecv/image", Image, queue_size=10)
         self.cam_info_pub = rospy.Publisher("/dronecv/image/info", String, queue_size=10)
@@ -23,11 +23,22 @@ class ListenerCam:
 
     def image_callback(self, message):
         frame = self.bridge.imgmsg_to_cv2(message, "bgr8")
-        area, img, distance_2_center = self.treat_image(frame)
+        area, img, error, mask, error, center = self.treat_image(frame)
+
+        text = "Centro: ", center, " Area: ", area
+        self.write_information(img, text, (0, 50), (0, 0, 255))
+
+        text = " Erro: ", error
+        self.write_information(img, text, (0, 70), (0, 0, 255))
+
         self.image_pub(img)
-        self.image_info_pub(area, distance_2_center)
+        self.image_info_pub(area, error)
         if(self.is_show):
             self.show(img)
+
+    def write_information(self, img, text, location, color):
+        font = cv2.FONT_HERSHEY_SIMPLEX
+        cv2.putText(img, str(text), location, font, 0.4, color, 1, cv2.LINE_AA)
 
     def show(self, img):
         cv2.namedWindow("Image", cv2.WINDOW_NORMAL)
@@ -37,9 +48,9 @@ class ListenerCam:
             self.is_show = False
             cv2.destroyAllWindows()
 
-    def image_info_pub(self, area, distance_2_center):
+    def image_info_pub(self, area, error):
         msg = String()
-        info = json.dumps(dict(Area = area, Distance = distance_2_center))
+        info = json.dumps(dict(Area = area, Erro = error))
         msg.data = info
         self.cam_info_pub.publish(msg)
 
@@ -55,12 +66,17 @@ class ListenerCam:
         contours = self.find_contours(mask)
         center = self.find_center(contours, mask)
         area = self.find_area(contours)
-        distance_2_center = 0
+        error = 0
         if area > 3000:
             self.draw_center(img_copy, center, 10, [0, 255, 0])
             self.draw_contours(img_copy, contours, 3, (0, 255, 0))
-            distance_2_center = self.distance_center(center, img_copy) 
-        return area, img_copy, distance_2_center
+            error = self.distance_center(center, img_copy)
+        return area, img_copy, error, mask, error, center
+
+    def distance_center(self, center, img):
+        center_win = (int(img.shape[1] / 2), int( img.shape[0] / 2))
+        cv2.line(img, (center_win[0],center_win[1]), (center[0], center[1]), (255, 0, 0), 3)
+        return center_win[0] - center[0]
 
     def find_area(self, contours):
         area = 0

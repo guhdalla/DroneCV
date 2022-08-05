@@ -133,6 +133,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/gustavo/DroneCV/build/gtest/cmake_install.cmake")
   include("/home/gustavo/DroneCV/build/dronecv_launch/cmake_install.cmake")
   include("/home/gustavo/DroneCV/build/controller_cam/cmake_install.cmake")
+  include("/home/gustavo/DroneCV/build/controller_vel/cmake_install.cmake")
 
 endif()
 

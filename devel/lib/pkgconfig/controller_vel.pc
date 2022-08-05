@@ -1,0 +1,8 @@
+prefix=/home/gustavo/DroneCV/devel
+
+Name: controller_vel
+Description: Description of controller_vel
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

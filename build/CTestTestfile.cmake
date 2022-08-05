@@ -7,3 +7,4 @@
 subdirs("gtest")
 subdirs("dronecv_launch")
 subdirs("controller_cam")
+subdirs("controller_vel")

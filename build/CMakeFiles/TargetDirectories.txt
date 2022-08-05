@@ -55,3 +55,10 @@
 /home/gustavo/DroneCV/build/controller_cam/CMakeFiles/list_install_components.dir
 /home/gustavo/DroneCV/build/controller_cam/CMakeFiles/rebuild_cache.dir
 /home/gustavo/DroneCV/build/controller_cam/CMakeFiles/std_msgs_generate_messages_cpp.dir
+/home/gustavo/DroneCV/build/controller_vel/CMakeFiles/install/strip.dir
+/home/gustavo/DroneCV/build/controller_vel/CMakeFiles/install/local.dir
+/home/gustavo/DroneCV/build/controller_vel/CMakeFiles/install.dir
+/home/gustavo/DroneCV/build/controller_vel/CMakeFiles/list_install_components.dir
+/home/gustavo/DroneCV/build/controller_vel/CMakeFiles/rebuild_cache.dir
+/home/gustavo/DroneCV/build/controller_vel/CMakeFiles/edit_cache.dir
+/home/gustavo/DroneCV/build/controller_vel/CMakeFiles/test.dir

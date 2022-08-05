@@ -56,6 +56,7 @@ CMAKE_BINARY_DIR = /home/gustavo/DroneCV/build
 all: gtest/all
 all: dronecv_launch/all
 all: controller_cam/all
+all: controller_vel/all
 
 .PHONY : all
 
@@ -63,6 +64,7 @@ all: controller_cam/all
 preinstall: gtest/preinstall
 preinstall: dronecv_launch/preinstall
 preinstall: controller_cam/preinstall
+preinstall: controller_vel/preinstall
 
 .PHONY : preinstall
 
@@ -75,6 +77,7 @@ clean: CMakeFiles/download_extra_data.dir/clean
 clean: gtest/clean
 clean: dronecv_launch/clean
 clean: controller_cam/clean
+clean: controller_vel/clean
 
 .PHONY : clean
 
@@ -99,6 +102,24 @@ controller_cam/clean: controller_cam/CMakeFiles/std_msgs_generate_messages_eus.d
 controller_cam/clean: controller_cam/CMakeFiles/std_msgs_generate_messages_cpp.dir/clean
 
 .PHONY : controller_cam/clean
+
+#=============================================================================
+# Directory level rules for directory controller_vel
+
+# Recursive "all" directory target.
+controller_vel/all:
+
+.PHONY : controller_vel/all
+
+# Recursive "preinstall" directory target.
+controller_vel/preinstall:
+
+.PHONY : controller_vel/preinstall
+
+# Recursive "clean" directory target.
+controller_vel/clean:
+
+.PHONY : controller_vel/clean
 
 #=============================================================================
 # Directory level rules for directory dronecv_launch
@@ -314,8 +335,8 @@ CMakeFiles/download_extra_data.dir/clean:
 # Target rules for target gtest/googlemock/CMakeFiles/gmock_main.dir
 
 # All Build rule for target.
-gtest/googlemock/CMakeFiles/gmock_main.dir/all: gtest/googlemock/CMakeFiles/gmock.dir/all
 gtest/googlemock/CMakeFiles/gmock_main.dir/all: gtest/googletest/CMakeFiles/gtest.dir/all
+gtest/googlemock/CMakeFiles/gmock_main.dir/all: gtest/googlemock/CMakeFiles/gmock.dir/all
 	$(MAKE) -f gtest/googlemock/CMakeFiles/gmock_main.dir/build.make gtest/googlemock/CMakeFiles/gmock_main.dir/depend
 	$(MAKE) -f gtest/googlemock/CMakeFiles/gmock_main.dir/build.make gtest/googlemock/CMakeFiles/gmock_main.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gustavo/DroneCV/build/CMakeFiles --progress-num=3,4 "Built target gmock_main"

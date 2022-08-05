@@ -15,10 +15,14 @@ set(CMAKE_MAKEFILE_DEPENDS
   "catkin_generated/order_packages.cmake"
   "controller_cam/catkin_generated/ordered_paths.cmake"
   "controller_cam/catkin_generated/package.cmake"
+  "controller_vel/catkin_generated/ordered_paths.cmake"
+  "controller_vel/catkin_generated/package.cmake"
   "dronecv_launch/catkin_generated/package.cmake"
   "/home/gustavo/DroneCV/src/CMakeLists.txt"
   "/home/gustavo/DroneCV/src/controller_cam/CMakeLists.txt"
   "/home/gustavo/DroneCV/src/controller_cam/package.xml"
+  "/home/gustavo/DroneCV/src/controller_vel/CMakeLists.txt"
+  "/home/gustavo/DroneCV/src/controller_vel/package.xml"
   "/home/gustavo/DroneCV/src/dronecv_launch/CMakeLists.txt"
   "/home/gustavo/DroneCV/src/dronecv_launch/package.xml"
   "/opt/ros/noetic/share/catkin/cmake/all.cmake"
@@ -172,6 +176,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "gtest/googletest/CMakeFiles/CMakeDirectoryInformation.cmake"
   "dronecv_launch/CMakeFiles/CMakeDirectoryInformation.cmake"
   "controller_cam/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "controller_vel/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
